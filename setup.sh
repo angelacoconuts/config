@@ -2,6 +2,23 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
+# Install maven for java project management
+sudo apt-get install maven
+
+# Modify default java sdk and jre settings
+# JAVA_HOME=/usr/local/java/jdk1.7.0_25
+# PATH=$PATH:$JAVA_HOME/bin
+# JRE_HOME=/usr/local/java/jre1.7.0_25
+# PATH=$PATH:$JRE_HOME/bin
+
+# sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jre1.7.0_25/bin/java" 1
+# sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.7.0_25/bin/javac" 1
+# sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jre2.7.0_25/bin/javaws" 1
+
+# sudo update-alternatives --set java /usr/local/java/jre1.7.0_25/bin/java
+# sudo update-alternatives --set javac /usr/local/java/jdk1.7.0_25/bin/javac
+# sudo update-alternatives --set javaws /usr/local/java/jre1.7.0_25/bin/javaws
+
 # Install git and curl if 
 sudo apt-get install -y git-core
 sudo apt-get install -y curl
