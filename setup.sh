@@ -5,7 +5,11 @@
 # Install maven for java project management
 sudo apt-get install maven
 
-# Modify default java sdk and jre settings
+# Install java 7
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+#Modify default java sdk and jre settings
 # JAVA_HOME=/usr/local/java/jdk1.7.0_25
 # PATH=$PATH:$JAVA_HOME/bin
 # JRE_HOME=/usr/local/java/jre1.7.0_25
