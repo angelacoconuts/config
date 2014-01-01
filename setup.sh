@@ -53,9 +53,6 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 # Install Heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-# Install PostgreSQL
-sudo apt-get install -y postgresql
-
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
@@ -71,3 +68,7 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# Install PostgreSQL
+sudo apt-get install -y postgresql
+#sudo to super user and create user
+sudo -s -u postgres createuser ubuntu
