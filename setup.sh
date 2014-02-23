@@ -6,9 +6,9 @@
 sudo apt-get install maven
 
 # Install java 7
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java7-installer
+# sudo add-apt-repository ppa:webupd8team/java
+# sudo apt-get update
+# sudo apt-get install oracle-java7-installer
 #Modify default java sdk and jre settings
 # JAVA_HOME=/usr/local/java/jdk1.7.0_25
 # PATH=$PATH:$JAVA_HOME/bin
