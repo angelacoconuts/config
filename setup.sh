@@ -73,3 +73,6 @@ ln -sf dotfiles/.emacs.d .
 sudo apt-get install -y postgresql
 #sudo to super user and create user
 sudo -s -u postgres createuser ubuntu
+
+sudo apt-get install build-essential
+
