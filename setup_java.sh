@@ -1,12 +1,20 @@
-JAVA_HOME=/usr/local/java/jdk1.7.0_51
-PATH=$PATH:$JAVA_HOME/bin
-JRE_HOME=/usr/local/java/jre1.7.0_51
-PATH=$PATH:$JRE_HOME/bin
+cd /home/ubuntu
 
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jre1.7.0_51/bin/java" 1
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.7.0_51/bin/javac" 1
-sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jre1.7.0_51/bin/javaws" 1
+wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz
+wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.tar.gz
 
-sudo update-alternatives --set java /usr/local/java/jre1.7.0_51/bin/java
-sudo update-alternatives --set javac /usr/local/java/jdk1.7.0_51/bin/javac
-sudo update-alternatives --set javaws /usr/local/java/jre1.7.0_51/bin/javaws
+tar xvf jdk-7u51-linux-x64.tar.gz
+tar xvf jre-7u51-linux-x64.tar.gz
+
+export JAVA_HOME=/home/ubuntu/java/jdk1.7.0_51
+export PATH=$PATH:$JAVA_HOME/bin
+export JRE_HOME=/home/ubuntu/java/jre1.7.0_51
+export PATH=$PATH:$JRE_HOME/bin
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/home/ubuntu/java/jre1.7.0_51/bin/java" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/home/ubuntu/java/jdk1.7.0_51/bin/javac" 1
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/home/ubuntu/java/jre1.7.0_51/bin/javaws" 1
+
+sudo update-alternatives --set java /home/ubuntu/java/jre1.7.0_51/bin/java
+sudo update-alternatives --set javac /home/ubuntu/java/jdk1.7.0_51/bin/javac
+sudo update-alternatives --set javaws /home/ubuntu/java/jre1.7.0_51/bin/javaws
