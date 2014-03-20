@@ -9,22 +9,26 @@ sudo apt-get install maven
 # sudo add-apt-repository ppa:webupd8team/java
 # sudo apt-get update
 # sudo apt-get install oracle-java7-installer
-#Modify default java sdk and jre settings
-# JAVA_HOME=/usr/local/java/jdk1.7.0_25
-# PATH=$PATH:$JAVA_HOME/bin
-# JRE_HOME=/usr/local/java/jre1.7.0_25
-# PATH=$PATH:$JRE_HOME/bin
+wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz
+wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jre-7u51-linux-x64.tar.gz
 
-# sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jre1.7.0_25/bin/java" 1
-# sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.7.0_25/bin/javac" 1
-# sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jre2.7.0_25/bin/javaws" 1
+tar xvf jdk-7u51-linux-x64.tar.gz
+tar xvf jre-7u51-linux-x64.tar.gz
 
-# sudo update-alternatives --set java /usr/local/java/jre1.7.0_25/bin/java
-# sudo update-alternatives --set javac /usr/local/java/jdk1.7.0_25/bin/javac
-# sudo update-alternatives --set javaws /usr/local/java/jre1.7.0_25/bin/javaws
+export JAVA_HOME=/home/ubuntu/jdk1.7.0_51
+export PATH=$PATH:$JAVA_HOME/bin
+export JRE_HOME=/home/ubuntu/jre1.7.0_51
+export PATH=$PATH:$JRE_HOME/bin
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/home/ubuntu/jre1.7.0_51/bin/java" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/home/ubuntu/jdk1.7.0_51/bin/javac" 1
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/home/ubuntu/jre1.7.0_51/bin/javaws" 1
+
+sudo update-alternatives --set java /home/ubuntu/jre1.7.0_51/bin/java
+sudo update-alternatives --set javac /home/ubuntu/jdk1.7.0_51/bin/javac
+sudo update-alternatives --set javaws /home/ubuntu/jre1.7.0_51/bin/javaws
 
 # Install git and curl if 
-sudo apt-get install -y git-core
 sudo apt-get install -y curl
 
 # Install nvm: node-version manager
