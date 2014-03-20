@@ -6,4 +6,8 @@ cd ~
 sudo apt-get install -y git-core
 git clone https://github.com/angelacoconuts/config.git
 ./config/setup.sh
+
+wget https://raw.githubusercontent.com/angelacoconuts/config/master/setup_java.sh
+chmod 764 setup_java.sh
+./setup_java.sh
 ```
