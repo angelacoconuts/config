@@ -31,19 +31,25 @@ sudo update-alternatives --set javaws /home/ubuntu/jre1.7.0_51/bin/javaws
 # Install git and curl if 
 sudo apt-get install -y curl
 
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+# curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # Load nvm and install latest production node
-source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
+# source $HOME/.nvm/nvm.sh
+# nvm install v0.10.12
+# nvm use v0.10.12
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
-sudo apt-get install npm
-npm install -g jshint
+# sudo apt-get install npm
+sudo npm install -g jshint
+sudo npm install -g bower
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
